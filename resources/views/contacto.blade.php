@@ -2,10 +2,10 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
 
-    <title>Forocalvos</title>
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -912,6 +912,7 @@
                 <li><a href="/inicio" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a></li>
                 <li><a href="/categorias"
                         class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a>
+                </li>
                 <li><a href="/contacto" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a>
                 </li>
             </ul>
@@ -920,24 +921,27 @@
             </div>
         </nav>
     </header>
-
-    <main class="p-4">
-        <section class="bg-white rounded shadow p-4 mb-4">
-            <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Temas Recientes</h2>
-            <div class="grid grid-cols-1 gap-4">
-                <div class="bg-blue-50 border border-blue-200 rounded p-4 hover:shadow">
-                    <h3 class="text-lg font-semibold text-blue-600 mb-2"><a href="">Humor de Calvos</a></h3>
-                    <p class="text-gray-700">Las mejores bromas de calvos para calvos.</p>
-                </div>
-                <div class="bg-yellow-50 border border-yellow-200 rounded p-4 hover:shadow">
-                    <h3 class="text-lg font-semibold text-yellow-600 mb-2"><a href="">Historias Divertidas</a>
-                    </h3>
-                    <p class="text-gray-700">Comparte tus historias graciosas sobre la calvicie.</p>
-                </div>
+    <section class="bg-white rounded shadow p-4 mb-4">
+        <h2 class="text-2xl font-bold mb-4 text-center text-blue-600">Contacto</h2>
+        <p class="text-center mb-4 text-gray-700">Si tienes alguna pregunta, sugerencia o simplemente quieres
+            saludar, no dudes en ponerte en contacto con nosotros. Puedes enviarnos un correo electrónico o usar el
+            formulario a continuación.</p>
+        <form class="max-w-md mx-auto">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-semibold text-gray-700">Nombre:</label>
+                <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded">
             </div>
-        </section>
-
-    </main>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-semibold text-gray-700">Correo Electrónico:</label>
+                <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-semibold text-gray-700">Mensaje:</label>
+                <textarea id="message" class="w-full border border-gray-300 p-2 rounded"></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
+        </form>
+    </section>
 </body>
 <footer class="bg-white p-4 mt-4 shadow-md">
     <div class="text-center text-gray-700">

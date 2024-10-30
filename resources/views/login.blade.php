@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Login</title>
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -901,19 +901,42 @@
     @endif
 </head>
 
-<body class="">
-    <div class="container">
-        <h1>Iniciar Sesión</h1>
-        <div class="form-group">
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
+<body class="bg-gray-100">
+    <header>
+        <nav class="bg-white p-4">
+            <div class="flex items-center justify-center mb-4">
+                <img src="{{ Vite::asset('resources/images/logo.webp') }}" alt="Logo Forocalvos" style="height: 40px;">
+                <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
+            </div>
+            <ul class="flex justify-around">
+                <li><a href="/inicio" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a></li>
+                <li><a href="/categorias"
+                        class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a>
+                </li>
+                <li><a href="/contacto" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="p-4 flex flex-col items-center">
+        <div class="bg-white p-4 w-full max-w-md rounded shadow">
+            <h1 class="text-2xl text-center text-blue-600 mb-4">Iniciar Sesión</h1>
+            <form method="POST" action="/login">
+                <div class="mb-4">
+                    <label for="email" class="block">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" class="w-full border p-2 rounded">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block">Contraseña:</label>
+                    <input type="password" id="password" name="password" class="w-full border p-2 rounded">
+                </div>
+                <button type="submit" class="bg-blue-500 text-white w-full p-2 rounded">Iniciar Sesión</button>
+            </form>
+            <div class="mt-4 text-center">
+                <p>¿No tienes una cuenta? <a href="/register" class="text-blue-500">Regístrate aquí</a></p>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="password">Contraseña:</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Iniciar Sesión</button>
-        </form>
     </div>
 </body>
 
