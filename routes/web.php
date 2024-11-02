@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Categoria;
+use App\Models\Hilo;
 
 Route::get('/', function () {
     return view('inicio');
@@ -19,6 +20,7 @@ Route::get('/contacto', function () {
     return view('contacto');
 });
 
-Route::get('/hilos', function () {
-    return view('hilos');
+Route::get('/hilos/{id}', function (string $id) {
+    return view('hilos', ["hilos" => Hilo::where('categoria_id',$id)->get(), 
+                          "categoria" => Categoria::find($id)]);
 });

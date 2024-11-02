@@ -34,3 +34,11 @@ El nombre del modelo **debe estar siempre** en **singular**.
 ```bash
 php artisan make:model Table
 ```
+
+### Interpolacion en php
+
+para interpolar para un valor de forma dinamica en php ustilizamos la sintaxis
+```php
+{{$variable}}
+```
+Esto imprimirá el valor de la variable cuando se renderice por el servidor.

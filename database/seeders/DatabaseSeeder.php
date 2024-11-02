@@ -82,5 +82,29 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+        //Creando Hilos
+
+        DB::table('hilos')->insert([
+            'titulo' => '¿Que cuchilla utilizais para afeitaros?',
+            'categoria_id' => 1,
+            'users_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        DB::table('hilos')->insert([
+            'titulo' => 'Lluvias en Valencia',
+            'categoria_id' => 1,
+            'users_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+        DB::table('hilos')->insert([
+            'titulo' => 'Por que no llueve en Barcelona?',
+            'categoria_id' => 2,
+            'users_id' => 1,
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
     }
 }
