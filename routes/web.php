@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Categoria;
 
 Route::get('/', function () {
     return view('inicio');
@@ -11,7 +12,7 @@ Route::get('/login', function () {
 });
 
 Route::get('/categorias', function () {
-    return view('categorias');
+    return view('categorias', ["categorias" => Categoria::all()]);
 });
 
 Route::get('/contacto', function () {
