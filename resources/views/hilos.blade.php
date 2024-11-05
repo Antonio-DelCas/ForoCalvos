@@ -9,7 +9,7 @@
             @foreach ($hilos as $hilo_valor)
                 <div class="bg-blue-50 border border-blue-200 rounded p-4 hover:shadow">
                     <h3 class="text-lg font-semibold text-blue-600 mb-2">
-                        <a href="#">{{$hilo_valor->titulo}}</a>
+                        <a href="/respuestas/{{ $hilo_valor->id }}">{{ $hilo_valor->titulo }}</a>
                     </h3>
                 </div>
             @endforeach

@@ -12,6 +12,10 @@ Route::get('/login', function () {
     return view('login');
 });
 
+Route::get('/perfil', function () {
+    return view('perfil');
+});
+
 Route::get('/categorias', function () {
     return view('categorias', ["categorias" => Categoria::all()]);
 });
@@ -21,6 +25,12 @@ Route::get('/contacto', function () {
 });
 
 Route::get('/hilos/{id}', function (string $id) {
-    return view('hilos', ["hilos" => Hilo::where('categoria_id',$id)->get(), 
-                          "categoria" => Categoria::find($id)]);
+    return view('hilos', [
+        "hilos" => Hilo::where('categoria_id', $id)->get(),
+        "categoria" => Categoria::find($id)
+    ]);
+});
+
+Route::get('/respuestas', function () {
+    return view('respuestas');
 });

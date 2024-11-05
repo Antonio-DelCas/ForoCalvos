@@ -912,8 +912,7 @@
             <ul class="flex justify-around">
                 <li><a href="/" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a></li>
                 <li><a href="/categorias"
-                        class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a>
-                </li>
+                        class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a></li>
                 <li><a href="contacto" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a>
                 </li>
             </ul>
