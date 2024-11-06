@@ -398,5 +398,14 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
+
+        //Respuestas Hilo 1
+        // DB::table('respuestas')->insert([
+        //     'hilo_id' => 1,
+        //     'user_id' => 1,  
+        //     'contenido' => 'Obviamente el calvo ganaría. Menos distracción, más concentración. Además, sin el cabello, su aerodinámica es mucho mejor. ¡Puede esquivar cualquier golpe!',
+        //     'created_at' => now(),
+        //     'updated_at' => now(),
+        // ]);
     }
 }
