@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Models\Categoria;
 use App\Models\Hilo;
+use App\Models\Respuesta;
 
 Route::get('/', function () {
     return view('inicio');
@@ -31,6 +32,12 @@ Route::get('/hilos/{id}', function (string $id) {
     ]);
 });
 
-Route::get('/respuestas', function () {
-    return view('respuestas');
+Route::get('/respuestas/{hiloId}', function (string $hiloId) {
+    $hilo = Hilo::findOrFail($hiloId);
+    $respuestas = Respuesta::where('hilos_id', $hiloId)->get();
+
+    return view('respuestas', [
+        "hilo" => $hilo,
+        "respuestas" => $respuestas
+    ]);
 });
