@@ -34,7 +34,7 @@ Route::get('/hilos/{id}', function (string $id) {
 
 Route::get('/respuestas/{hiloId}', function (string $hiloId) {
     $hilo = Hilo::findOrFail($hiloId);
-    $respuestas = Respuesta::where('hilos_id', $hiloId)->get();
+    $respuestas = Respuesta::with('user')->where('hilos_id', $hiloId)->get();
 
     return view('respuestas', [
         "hilo" => $hilo,

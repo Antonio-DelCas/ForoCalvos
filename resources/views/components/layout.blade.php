@@ -905,8 +905,8 @@
     <header>
         <nav class="bg-white p-4 shadow-md">
             <div class="flex items-center justify-center mb-4">
-                <img class="rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
-                    alt="Logo Forocalvos" style="height: 34px;">
+                <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
+                    alt="Logo Forocalvos">
                 <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
             </div>
             <ul class="flex justify-around">
