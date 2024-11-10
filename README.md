@@ -17,7 +17,7 @@ composer dev
 
 ## Comandos del servidor
 
-### Crear una migración
+### Crear tabla en la base de datos
 
 Para crear una migracion ejecuta el siguiente comando, si el nombre de la migración empieza por un verbo [create,delete,update] laravel rellenara el archivo con el codigo correspondiente para empezar mas rapido.
 Para hacer que las automatizaciones de laravel funcionen bien, el nombre de la tabla **debe estar siempre** en **plural**.
