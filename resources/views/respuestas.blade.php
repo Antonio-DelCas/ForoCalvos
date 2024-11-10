@@ -13,8 +13,7 @@
                             src="{{ '/storage/' . $respuesta->user->imagen ?? Vite::asset('resources/images/user_default.webp') }}"
                             alt="Avatar del usuario">
                         <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-blue-600">
-                                {{ $respuesta->user->name }}</h3>
+                            <h3 class="text-lg font-semibold text-blue-600">{{ $respuesta->user->name }}</h3>
                             <p class="text-sm text-gray-500">Publicado el:
                                 {{ $respuesta->created_at->format('d/m/Y H:i') }}</p>
                         </div>
@@ -23,5 +22,16 @@
                 </div>
             @endforeach
         </div>
+    </section>
+
+    <section class="bg-white rounded shadow p-4 mt-4">
+        <form action="<!-- aqui estaria la ruta para almacenar la respuesta no? -->" method="POST">
+            <!-- Token -->
+            @csrf
+            <input type="hidden" name="hilo_id" value="{{ $hilo->id }}">
+            <textarea name="contenido" id="contenido" rows="3" class="w-full border border-gray-300 rounded p-2 focus:outline-none focus:ring focus:border-blue-300"
+                placeholder="Escribe tu respuesta aquí..." required></textarea>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 mt-2 rounded hover:bg-blue-700">Añadir respuesta</button>
+        </form>
     </section>
 </x-layout>

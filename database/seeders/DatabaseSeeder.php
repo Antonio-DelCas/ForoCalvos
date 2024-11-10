@@ -435,13 +435,13 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 1,
             'users_id' => 1,
-            'contenido' => 'Obviamente el calvo ganaría. Menos distracción, más concentración. Además, sin el cabello, su aerodinámica es mucho mejor. ¡Puede esquivar cualquier golpe!',
+            'contenido' => 'Obviamente el calvo ganaría. Menos distracción, más concentración. Además, sin el pelo, su aerodinámica es mucho mejor. ¡Puede esquivar cualquier golpe!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('respuestas')->insert([
             'hilos_id' => 1,
-            'users_id' => 1,
+            'users_id' => 3,
             'contenido' => 'No estoy tan seguro… una buena melena podría funcionar como protección extra. Algo así como un casco natural, ¿no?',
             'created_at' => now(),
             'updated_at' => now(),
@@ -519,7 +519,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 5,
             'users_id' => 1,
-            'contenido' => 'Kratos, sin duda. ¡Ese tipo no necesita ni cabello para hacer temblar a los dioses! Aunque Agent 47 también es letal, Kratos tiene fuerza bruta y un bronceado perfecto.',
+            'contenido' => 'Kratos, sin duda. ¡Ese tipo no necesita ni pelo para hacer temblar a los dioses! Aunque Agent 47 también es letal, Kratos tiene fuerza bruta y un bronceado perfecto.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -995,7 +995,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 27,
             'users_id' => 5,
-            'contenido' => 'Vin Diesel en Rápidos y Furiosos. ¡Toda la saga y nunca necesita peinarse!',
+            'contenido' => 'Vin Diesel en Fast & Furious. ¡Toda la saga y nunca necesita peinarse!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1030,7 +1030,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 29,
             'users_id' => 2,
-            'contenido' => 'Algunos cascos tienen acolchado demasiado grueso, y eso se siente raro sin cabello. ¡El modelo ligero de Oculus va perfecto!',
+            'contenido' => 'Algunos cascos tienen acolchado demasiado grueso, y eso se siente raro sin pelo. ¡El modelo ligero de Oculus va perfecto!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1272,90 +1272,5 @@ class DatabaseSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now(),
         ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 41,
-            'users_id' => 4,
-            'contenido' => 'Con los cascos VR, sin pelo no hay tirones ni sudor atrapado. ¡Es una ventaja oculta de la calvicie!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 41,
-            'users_id' => 2,
-            'contenido' => 'Algunos cascos tienen acolchado demasiado grueso, y eso se siente raro sin cabello. ¡El modelo ligero de Oculus va perfecto!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 41,
-            'users_id' => 5,
-            'contenido' => 'Yo uso uno con ventilación especial. ¡Nada peor que sentir el calor atrapado en la cabeza calva!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 42,
-            'users_id' => 3,
-            'contenido' => 'Sí, hay apps que te recuerdan aplicar protector solar. ¡Perfectas para no olvidar!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 42,
-            'users_id' => 4,
-            'contenido' => 'Yo uso una para monitorear el clima y saber cuándo usar gorra. Muy útil.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 42,
-            'users_id' => 2,
-            'contenido' => 'No he visto una específica para calvos, pero sería genial una que te sugiera productos.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 43,
-            'users_id' => 5,
-            'contenido' => 'Si inventan uno que pula el cuero cabelludo, ¡lo compraría! Solo falta que haga masajes.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 43,
-            'users_id' => 4,
-            'contenido' => '¡Sería genial! Algo como un Roomba para la cabeza. Limpio y brillante todo el tiempo.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 43,
-            'users_id' => 3,
-            'contenido' => 'Imagina una máquina que te aplique los productos automáticamente. ¡Sería un sueño!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 44,
-            'users_id' => 2,
-            'contenido' => '¡Perfecto para los que queremos destacar en la oscuridad! El look de fiesta calvo.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 44,
-            'users_id' => 5,
-            'contenido' => 'Yo lo probaría para ciclismo nocturno. Además de seguridad, ¡se ve futurista!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        DB::table('respuestas')->insert([
-            'hilos_id' => 44,
-            'users_id' => 3,
-            'contenido' => 'Solo si tiene una función para ajustar el brillo. ¡No quiero parecer una linterna humana!',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-        
     }
 }

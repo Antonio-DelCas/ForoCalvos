@@ -901,36 +901,39 @@
     @endif
 </head>
 
-<body class="bg-gray-100 min-h-screen">
-    <header>
-        <nav class="bg-white p-4 shadow-md">
-            <div class="flex items-center justify-center mb-4">
-                <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
-                    alt="Logo Forocalvos">
-                <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
-            </div>
-            <ul class="flex justify-around">
-                <li><a href="/" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a></li>
-                <li><a href="/categorias"
-                        class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a></li>
-                <li><a href="contacto" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a>
-                </li>
-            </ul>
-            <div class="mt-4 flex justify-center gap-4">
-                <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
-            </div>
-        </nav>
-    </header>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <div class="flex flex-col min-h-screen">
+        <header>
+            <nav class="bg-white p-4 shadow-md relative">
+                <div class="absolute top-6 left-10 flex gap-4">
+                    <a href="/crearHilo" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Crear hilo de discusión</a>
+                </div>
+                <div class="absolute top-6 right-10 flex gap-6">
+                    <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
+                    <a href="/logout(Ruta logout o como???)" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Cerrar sesión</a>
+                </div>
+                <div class="flex items-center justify-center mb-4">
+                    <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
+                        alt="Logo Forocalvos">
+                    <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
+                </div>
+                <ul class="flex justify-around">
+                    <li><a href="/" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a></li>
+                    <li><a href="/categorias" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a></li>
+                    <li><a href="/contacto" class="text-blue-500 font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main class="container mx-auto my-4">
-        {{ $slot }}
-    </main>
-    <footer class="bg-white p-4 mt-4 shadow-md">
-        <div class="text-center text-gray-700">
-            <p>&copy; 2024 ForoCalvos. Todos los derechos reservados.</p>
-            <p>Sigue nuestras redes sociales para más contenido divertido sobre la calvicie.</p>
-        </div>
-    </footer>
+        <main class="container mx-auto my-4 flex-1">
+            {{ $slot }}
+        </main>
+
+        <footer class="bg-white p-4 mt-4 shadow-md w-full">
+            <div class="text-center text-gray-700">
+                <p>&copy; 2024 ForoCalvos. Todos los derechos reservados.</p>
+                <p>Sigue nuestras redes sociales para más contenido divertido sobre la calvicie.</p>
+            </div>
+        </footer>
+    </div>
 </body>
-
-</html>

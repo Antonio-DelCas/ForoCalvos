@@ -24,6 +24,9 @@ Route::get('/categorias', function () {
 Route::get('/contacto', function () {
     return view('contacto');
 });
+Route::get('/crearHilo', function () {
+    return view('crearHilo');
+});
 
 Route::get('/hilos/{id}', function (string $id) {
     return view('hilos', [
