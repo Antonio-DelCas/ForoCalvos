@@ -5,7 +5,7 @@
                 src="{{ Vite::asset('resources/images/perfil.jpg') }}" alt="Perfil del usuario">
             <div class="ml-6">
                 <h2 class="text-2xl font-bold text-blue-600">{{ auth()->user()->name }}</h2>
-                <p class="text-gray-500">Correo electrónico: {{ $email ?? 'correo@ejemplo.com' }}</p>
+                <p class="text-gray-500">Correo electrónico: {{ auth()->user()->email }}</p>
             </div>
         </div>
         <div class="mt-4">

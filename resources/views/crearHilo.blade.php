@@ -39,7 +39,7 @@
                     hilo</label>
                 <p class="text-sm text-gray-500 mb-2">Comienza la conversación, ¡deja que los demás calvos te sigan el
                     rollo!</p>
-                <textarea name="contenido" id="contenido" rows="5"
+                <textarea name="contenido" id="contenido" rows="4"
                     class="w-full border border-gray-300 rounded p-3 focus:outline-none focus:ring focus:border-blue-300"
                     placeholder="Escribe aquí tu primer aporte..." required></textarea>
             </div>

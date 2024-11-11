@@ -904,26 +904,30 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <header>
         <nav class="bg-white p-4 shadow-md relative">
-            <div class="absolute top-6 left-10 flex gap-4">
-                <a href="/crear-hilo" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Crear hilo
-                    de discusión</a>
-            </div>
+            @auth
+                <div class="absolute top-6 left-10 flex gap-4">
+                    <a href="/crear-hilo" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Crear hilo
+                        de discusión</a>
+                </div>
+            @endauth
 
             <div class="absolute top-6 right-10 flex gap-6">
                 @guest
                     <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
                 @endguest
                 @auth
-                <a href="/perfil" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mi Perfil</a>
+                    <a href="/perfil" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mi Perfil</a>
                     <a href="{{ route('logout') }}" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Cerrar
                         sesión</a>
                 @endauth
             </div>
+
             <div class="flex items-center justify-center mb-4">
                 <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
                     alt="Logo Forocalvos">
                 <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
             </div>
+
             <ul class="flex justify-around">
                 <li><a href="/"
                         class="{{ request()->path() == '/' ? 'bg-blue-400 text-white' : 'text-blue-500' }} font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a>
@@ -949,7 +953,7 @@
 
     <footer class="bg-white p-4 mt-4 shadow-md w-full">
         <div class="text-center text-gray-700">
-            <p>&copy; 2024 ForoCalvos. Todos los derechos reservados.</p>
+            <p>&copy; <?php echo date('Y'); ?> ForoCalvos. Todos los derechos reservados.</p>
             <p>Sigue nuestras redes sociales para más contenido divertido sobre la calvicie.</p>
         </div>
     </footer>

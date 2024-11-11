@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HilosController;
+use App\Http\Controllers\RespuestasController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Categoria;
 use App\Models\Hilo;
@@ -15,6 +16,7 @@ Route::get('/login', function () {
     return view('login', [AuthController::class]);
 });
 Route::post('/login-attempt', [AuthController::class, 'login'])->name('login-attempt');
+
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::get('/perfil', function () {
@@ -34,6 +36,8 @@ Route::get('/crear-hilo', function () {
 });
 
 Route::post('/crear-hilo-action', [HilosController::class, 'crear'])->name('crear-hilo-action');
+
+// Route::post('/crear-respuesta-action', [RespuestasController::class, 'crear'])->name('crear-respuesta-action');
 
 Route::get('/hilos/{categoriasId}', function (string $categoriasId) {
     return view('hilos', [

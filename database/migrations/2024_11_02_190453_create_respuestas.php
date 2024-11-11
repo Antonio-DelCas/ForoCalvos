@@ -18,8 +18,6 @@ return new class extends Migration
             $table->foreignId('hilos_id')->references('id')->on('hilos')->onDelete('cascade');
             $table->foreignId('users_id')->references('id')->on('users')->onDelete('cascade');
 
-            
-            
         });
     }
 
