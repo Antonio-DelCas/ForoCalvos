@@ -906,18 +906,19 @@
         <nav class="bg-white p-4 shadow-md relative">
             @auth
                 <div class="absolute top-6 left-10 flex gap-4">
-                    <a href="/crear-hilo" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Crear hilo
+                    <a href="/crear-hilo" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Crear hilo
                         de discusión</a>
                 </div>
             @endauth
 
             <div class="absolute top-6 right-10 flex gap-6">
                 @guest
-                    <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
+                    <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
                 @endguest
                 @auth
-                    <a href="/perfil" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Mi Perfil</a>
-                    <a href="{{ route('logout') }}" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Cerrar
+                    <a href="/perfil" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Mi Perfil</a>
+                    <a href="{{ route('logout') }}"
+                        class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Cerrar
                         sesión</a>
                 @endauth
             </div>
@@ -925,7 +926,7 @@
             <div class="flex items-center justify-center mb-4">
                 <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
                     alt="Logo Forocalvos">
-                <h1 class="text-3xl font-bold text-blue-600 ml-2">Forocalvos</h1>
+                <h1 class="text-3xl font-bold text-blue-700 ml-2">Forocalvos</h1>
             </div>
 
             <ul class="flex justify-around">
