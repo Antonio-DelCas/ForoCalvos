@@ -10,16 +10,12 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class RespuestasController
+class RespuestasController extends Controller
 {
-    public function crear(Request $request): RedirectResponse
+    public function crear(Request $request)
     {
-        Log::debug('This is a debug message.');
-
-        // Comprobamos que la categoria, titulo y el contenido sean correctos
         $request->validate([
-            'categoria' => 'required',
-            'titulo' => 'required',
+            'hilos_id' => 'required',
             'contenido' => 'required'
         ]);
 
@@ -30,6 +26,6 @@ class RespuestasController
         $contenido->users_id = Auth::id();
         $contenido->save();
 
-        return redirect("/respuestas/" . $contenido->id);
+        return response()->json($contenido);
     }
 }

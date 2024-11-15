@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HilosController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\RespuestasController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Categoria;
@@ -13,9 +14,13 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return view('login', [AuthController::class]);
+    return view('login');
 });
-Route::post('/login-attempt', [AuthController::class, 'login'])->name('login-attempt');
+Route::get('/registro', function () {
+    return view('registro');
+});
+Route::post('/login-action', [AuthController::class, 'login'])->name('login-action');
+Route::post('/registro-action', [AuthController::class, 'registro'])->name('registro-action');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
@@ -37,7 +42,7 @@ Route::get('/crear-hilo', function () {
 
 Route::post('/crear-hilo-action', [HilosController::class, 'crear'])->name('crear-hilo-action');
 
-// Route::post('/crear-respuesta-action', [RespuestasController::class, 'crear'])->name('crear-respuesta-action');
+Route::post('/crear-respuesta-action', [RespuestasController::class, 'crear'])->name('crear-respuesta-action');
 
 Route::get('/hilos/{categoriasId}', function (string $categoriasId) {
     return view('hilos', [
@@ -55,3 +60,5 @@ Route::get('/respuestas/{hiloId}', function (string $hiloId) {
         "respuestas" => $respuestas
     ]);
 });
+
+Route::post('/subir-imagen-action', [PerfilController::class, 'subirImagen'])->name('subir-imagen-action');

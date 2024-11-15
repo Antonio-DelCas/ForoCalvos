@@ -5,6 +5,7 @@
 -   Instalar [PHP](https://www.php.net/manual/es/install.php), [composer](https://getcomposer.org/) y [Node](https://nodejs.org/en/)
 -   Clonar el repositorio: `git clone git@github.com:Antonio-DelCas/forocalvos.git`
 -   Instalar dependencias, php `composer install --ignore-platform-reqs` y node `npm i`
+-   Enlazar el storage con la carpeta `public`: `php artisan storage:link`
 -   Aplicar migraciones y sembrar la base de datos `php artisan migrate:refresh --seed`, con esto creamos las tablas en el SQL y introducimos los datos por defecto
 
 ## Ejecutar el servidor
@@ -38,7 +39,9 @@ php artisan make:model Table
 ### Interpolacion en php
 
 para interpolar para un valor de forma dinamica en php ustilizamos la sintaxis
+
 ```php
 {{$variable}}
 ```
+
 Esto imprimirá el valor de la variable cuando se renderice por el servidor.

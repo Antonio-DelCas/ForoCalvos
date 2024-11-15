@@ -1,6 +1,6 @@
 <x-layout>
 
-    <section class="bg-blue-50 text-blue-900 text-white rounded-lg shadow-lg p-10 mb-10 text-center">
+    <section class="bg-blue-50 text-blue-900 rounded-lg shadow-lg p-10 mb-10 text-center">
         <h1 class="text-4xl font-bold mb-4">Bienvenido a ForoCalvos</h1>
         <p class="text-lg mb-6 max-w-2x1 mx-auto">
             Un lugar donde los calvos de todo el mundo pueden reunirse, compartir experiencias, reírse, y encontrar

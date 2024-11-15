@@ -952,10 +952,14 @@
         {{ $slot }}
     </main>
 
+
     <footer class="bg-white p-4 mt-4 shadow-md w-full">
         <div class="text-center text-gray-700">
             <p>&copy; <?php echo date('Y'); ?> ForoCalvos. Todos los derechos reservados.</p>
             <p>Sigue nuestras redes sociales para más contenido divertido sobre la calvicie.</p>
         </div>
     </footer>
+    <script>
+        window.user = {{ Js::from(auth()->user()) }}
+    </script>
 </body>

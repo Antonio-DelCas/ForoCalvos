@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -36,6 +37,25 @@ class AuthController extends Controller
 
         // Si el usuario no existe devolvemos al usuario al formulario de login con un mensaje de error
         return redirect("/login")->with('error', 'Los datos introducidos no estan registrados');
+    }
+
+    public function registro(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => 'required'
+        ]);
+
+        $cuenta = new User;
+        $cuenta->name = $request->name;
+        $cuenta->email = $request->email;
+        $cuenta->password = $request->password;
+        $cuenta->save();
+
+        Auth::attempt(["email" => $request->email, "password" => $request->password]);
+
+        return redirect("/");
     }
 
     public function logout(Request $request): RedirectResponse
