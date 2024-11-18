@@ -903,46 +903,49 @@
 
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <header>
-        <nav class="bg-white p-4 shadow-md relative">
+        <nav class="bg-gray-100 p-4 shadow-md relative">
             @auth
                 <div class="absolute top-6 left-10 flex gap-4">
-                    <a href="/crear-hilo" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Crear hilo
+                    <a href="/crear-hilo" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-700 shadow-md">Crear hilo
                         de discusión</a>
                 </div>
             @endauth
 
             <div class="absolute top-6 right-10 flex gap-6">
                 @guest
-                    <a href="/login" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
+                    <a href="/login"  class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Login</a>
+                    <a href="/registro"
+                        class="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition shadow-md">
+                        Regístrate aquí</a>
                 @endguest
                 @auth
-                    <a href="/perfil" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Mi Perfil</a>
+                    <a href="/perfil" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Mi Perfil</a>
                     <a href="{{ route('logout') }}"
-                        class="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Cerrar
+                        class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Cerrar
                         sesión</a>
                 @endauth
             </div>
 
             <div class="flex items-center justify-center mb-4">
-                <img class="h-16 w-16 rounded-full ring-1" src="{{ Vite::asset('resources/images/logo.png') }}"
-                    alt="Logo Forocalvos">
-                <h1 class="text-3xl font-bold text-blue-700 ml-2">Forocalvos</h1>
+                <img class="h-16 w-16 rounded-full ring-1 ring-orange-500"
+                    src="{{ Vite::asset('resources/images/logo.png') }}" alt="Logo Forocalvos">
+                <h1 class="text-3xl font-bold text-orange-700 ml-2">Forocalvos</h1>
             </div>
 
             <ul class="flex justify-around">
                 <li><a href="/"
-                        class="{{ request()->path() == '/' ? 'bg-blue-400 text-white' : 'text-blue-500' }} font-semibold p-2 hover:bg-blue-300 rounded">Inicio</a>
+                        class="{{ request()->path() == '/' ? 'bg-orange-500 text-white' : 'text-orange-800' }} font-semibold p-2 hover:bg-orange-400 rounded">Inicio</a>
                 </li>
                 <li><a href="/categorias"
                         class="{{ array_filter(
                             ['categorias', 'hilos', 'respuestas'],
                             fn($prefix) => str_starts_with(request()->path(), $prefix),
                         )
-                            ? 'bg-blue-400 text-white'
-                            : 'text-blue-500' }} font-semibold p-2 hover:bg-blue-300 rounded">Categorías</a>
+                            ? 'bg-orange-500 text-white'
+                            : 'text-orange-800' }} font-semibold p-2 hover:bg-orange-400 rounded">Categorías</a>
                 </li>
                 <li><a href="/contacto"
-                        class="{{ request()->path() == 'contacto' ? 'bg-blue-400 text-white' : 'text-blue-500' }} font-semibold p-2 hover:bg-blue-300 rounded">Contacto</a>
+                        class="{{ request()->path() == 'contacto' ? 'bg-orange-500 text-white' : 'text-orange-800' }} font-bold p-2 hover:bg-orange-400 rounded">Contacto</a>
                 </li>
             </ul>
         </nav>
@@ -956,7 +959,6 @@
     <footer class="bg-white p-4 mt-4 shadow-md w-full">
         <div class="text-center text-gray-700">
             <p>&copy; <?php echo date('Y'); ?> ForoCalvos. Todos los derechos reservados.</p>
-            <p>Sigue nuestras redes sociales para más contenido divertido sobre la calvicie.</p>
         </div>
     </footer>
     <script>

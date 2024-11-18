@@ -15,7 +15,7 @@ class AuthController extends Controller
 
     /**
      * Función que se encarga de recibir los datos del formulario de login, comprobar que el usuario existe y
-     * en caso correcto logar al usuario
+     * en caso correcto logear al usuario
      */
     public function login(Request $request): RedirectResponse
     {
@@ -30,7 +30,7 @@ class AuthController extends Controller
         // Almacenamos las credenciales de email y contraseña
         $credentials = $request->only('email', 'password');
 
-        // Si el usuario existe lo logamos y lo llevamos a la vista de "logados" con un mensaje
+        // Si el usuario existe lo logeamos 
         if (Auth::attempt($credentials)) {
             return redirect('/');
         }
