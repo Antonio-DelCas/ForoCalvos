@@ -6,14 +6,15 @@
             Un lugar donde los calvos de todo el mundo pueden reunirse, compartir experiencias, reírse, y encontrar
             apoyo en sus calvas.
         </p>
-        <a href="/crear-hilo"
+        <a href="{{ auth()->check() ? '/crear-hilo' : '/login' }}"
+            onclick="{{ auth()->check() ? '' : 'alert("¡Ey, cabeza brillante! Primero inicia sesión para compartir esas ideas tan brillantes");' }}"
             class=" bg-orange-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-700 shadow-lg hover:shadow-xl transition duration-200 ease-out">
             Crear un hilo de discusión
         </a>
     </section>
 
     <section class="bg-white rounded shadow p-6 text-center mb-4">
-        <h2 class="text-3xl font-bold text-orange-900 mb-4">Explora nuestras Categorías</h2>
+        <h2 class="text-3xl font-bold text-orange-900 mb-4">Explora algunas de nuestras Categorías</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="/hilos/1"
                 class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out">

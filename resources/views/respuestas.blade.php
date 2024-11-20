@@ -5,6 +5,18 @@
     <section class="bg-white rounded shadow p-4 mb-4">
         <h2 class="text-2xl font-bold mb-1 text-center text-orange-600">{{ $hilo->titulo }}</h2>
         <h3 class="text-xl font-bold mb-4 text-center text-orange-600">{{ $hilo->descripcion }}</h3>
+        <!-- Mensajes de éxito o error después de eliminar una respuesta -->
+        @if (session('success'))
+            <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if (session('error'))
+            <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4">
+                {{ session('error') }}
+            </div>
+        @endif
         <div id="respuesta-contenedor" class="grid grid-cols-1 gap-4">
             @foreach ($respuestas as $respuesta)
                 <div class="bg-gray-50 border border-gray-200 rounded p-4 hover:shadow">
@@ -18,6 +30,16 @@
                         </div>
                     </div>
                     <p class="text-gray-700">{{ $respuesta->contenido }}</p>
+                    <!-- Verificamos si el usuario logeado es administrador para mostrarle el botón eliminar comentario -->
+                    @if (auth()->check() && auth()->user()->is_admin)
+                        <form action="{{ route('respuestas.eliminar') }}" method="POST" class="mt-2">
+                            @csrf
+                            @method('DELETE')
+                            <input type="hidden" name="respuesta_id" value="{{ $respuesta->id }}">
+                            <button type="submit"
+                                class="bg-red-500 text-white px-5 py-2 rounded-lg hover:bg-red-600 shadow-sm transition ease-in-out duration-150">Eliminar</button>
+                        </form>
+                    @endif
                 </div>
             @endforeach
         </div>

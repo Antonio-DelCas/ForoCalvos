@@ -5,7 +5,7 @@
 
     <div class="flex justify-center">
         <div class="bg-white p-4 w-full max-w-md rounded shadow">
-            <h1 class="text-2xl text-center text-orange-600 mb-4">Registro de calvo</h1>
+            <h1 class="text-2xl text-center text-orange-600 mb-4">Registro de nuevo calvo</h1>
             @if (session()->has('error'))
                 <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
                     <strong class="font-bold">Error al Logear</strong>

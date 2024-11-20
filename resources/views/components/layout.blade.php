@@ -904,22 +904,32 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <header>
         <nav class="bg-gray-100 p-4 shadow-md relative">
+        <!-- Se añade un aviso para saber que estamos con el usuario admin -->
+            @if (auth()->check() && auth()->user()->is_admin)
+                <div class="bg-red-600 text-white font-bold text-center py-2 px-4 rounded-lg  w-max mx-auto mb-4">
+                    Modo Calvo Admin Activado
+                </div>
+            @endif
             @auth
                 <div class="absolute top-6 left-10 flex gap-4">
-                    <a href="/crear-hilo" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-700 shadow-md">Crear hilo
+                    <a href="/crear-hilo"
+                        class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-700 shadow-md">Crear hilo
                         de discusión</a>
                 </div>
             @endauth
 
             <div class="absolute top-6 right-10 flex gap-6">
                 @guest
-                    <a href="/login"  class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Login</a>
+                    <a href="/login"
+                        class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Inicio de
+                        sesión</a>
                     <a href="/registro"
                         class="border border-orange-500 text-orange-500 px-4 py-2 rounded-lg hover:bg-orange-500 hover:text-white transition shadow-md">
                         Regístrate aquí</a>
                 @endguest
                 @auth
-                    <a href="/perfil" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Mi Perfil</a>
+                    <a href="/perfil" class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 shadow-md">Mi
+                        Perfil</a>
                     <a href="{{ route('logout') }}"
                         class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">Cerrar
                         sesión</a>
@@ -945,7 +955,7 @@
                             : 'text-orange-800' }} font-semibold p-2 hover:bg-orange-400 rounded">Categorías</a>
                 </li>
                 <li><a href="/contacto"
-                        class="{{ request()->path() == 'contacto' ? 'bg-orange-500 text-white' : 'text-orange-800' }} font-bold p-2 hover:bg-orange-400 rounded">Contacto</a>
+                        class="{{ request()->path() == 'contacto' ? 'bg-orange-500 text-white' : 'text-orange-800' }} font-semibold p-2 hover:bg-orange-400 rounded">Contacto</a>
                 </li>
             </ul>
         </nav>

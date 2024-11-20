@@ -28,4 +28,19 @@ class RespuestasController extends Controller
 
         return response()->json($contenido);
     }
+    public function eliminarComentario(Request $request)
+    {
+        $request->validate([
+            'respuesta_id' => 'required'
+        ]);
+
+        $respuesta = Respuesta::findOrFail($request->respuesta_id);
+
+        if (Auth::check() && Auth::user()->is_admin) {
+            $respuesta->delete();
+            return redirect()->back()->with(['success' => 'El comentario ha sido eliminado.']);
+        }
+
+        return redirect()->back()->with(['error' => 'No tienes permiso para eliminar comentarios.'], 403);
+    }
 }

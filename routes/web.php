@@ -51,6 +51,9 @@ Route::get('/hilos/{categoriasId}', function (string $categoriasId) {
     ]);
 });
 
+Route::delete('/respuestas/eliminar', [RespuestasController::class, 'eliminarComentario'])->name('respuestas.eliminar')->middleware('auth');
+
+
 Route::get('/respuestas/{hiloId}', function (string $hiloId) {
     $hilo = Hilo::findOrFail($hiloId);
     $respuestas = Respuesta::with('user')->where('hilos_id', $hiloId)->get();

@@ -3,7 +3,7 @@
         <div class="flex items-center mb-4">
             <div class="w-24 h-24 rounded-full overflow-hidden ring-2 ring-gray-300">
                 <img class="w-full h-full object-cover"
-                    src="{{ auth()->user()->imagen ? asset('/storage/' . auth()->user()->imagen) : asset('default-avatar.png') }}"
+                    src="{{ auth()->user()->imagen ? asset('/storage/' . auth()->user()->imagen) : asset('default-usuario.jpg') }}"
                     alt="Perfil del usuario">
             </div>
             <div class="ml-6">
