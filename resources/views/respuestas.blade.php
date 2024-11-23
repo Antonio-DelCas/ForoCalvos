@@ -24,7 +24,9 @@
                         <img class="w-10 h-10 rounded-full ring-2 ring-gray-300"
                             src="{{ asset('/storage/' . $respuesta->user->imagen) }}" alt="Avatar del usuario">
                         <div class="ml-4">
-                            <h3 class="text-lg font-semibold text-orange-600">{{ $respuesta->user->name }}</h3>
+                            <a href="/perfil-usuario/{{$respuesta->user->id}}">
+                                <h3 class="text-lg font-semibold text-orange-600">{{ $respuesta->user->name }} </h3>
+                            </a>
                             <p class="text-sm text-gray-500">Publicado el:
                                 {{ $respuesta->created_at->format('d/m/Y H:i') }}</p>
                         </div>

@@ -55,6 +55,10 @@ class AuthController extends Controller
 
         Auth::attempt(["email" => $request->email, "password" => $request->password]);
 
+        Auth::login($cuenta);
+
+        session()->flash('success', 'Nuevo calvo registrado, ' . $cuenta->name . ' !Bienvenido a ForoCalvos! Ahora eres un calvo con estilo');
+
         return redirect("/");
     }
 

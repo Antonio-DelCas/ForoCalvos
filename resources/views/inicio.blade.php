@@ -1,4 +1,11 @@
 <x-layout>
+<!-- Mensaje que muestra que se ha registrado correctamente -->
+@if (session()->has('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 text-center" role="alert">
+            <strong class="font-bold">¡Registrado!</strong>
+            <p>{{ session('success') }}</p>
+        </div>
+    @endif
 
     <section class="bg-orange-50 text-orange-900 rounded-lg shadow-lg p-10 mb-10 text-center">
         <h1 class="text-4xl font-bold mb-4">Bienvenido a ForoCalvos</h1>

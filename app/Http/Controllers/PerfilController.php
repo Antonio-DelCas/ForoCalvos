@@ -29,4 +29,16 @@ class PerfilController extends Controller
 
         return redirect("/perfil");
     }
+    public function editarBiografia(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'biografia' => 'required',
+        ]);
+
+        $user = User::find(Auth::user()->id);
+        $user->biografia = $request->biografia;
+        $user->save();
+
+        return redirect("/perfil");
+    }
 }

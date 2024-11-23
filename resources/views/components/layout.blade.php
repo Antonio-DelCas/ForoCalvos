@@ -915,6 +915,7 @@
                     <a href="/crear-hilo"
                         class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-700 shadow-md">Crear hilo
                         de discusión</a>
+                        <span class="text-gray-700 font-semibold bg-white px-4 py-2 rounded-md shadow-md">Bienvenido, {{ auth()->user()->name }}</span>
                 </div>
             @endauth
 

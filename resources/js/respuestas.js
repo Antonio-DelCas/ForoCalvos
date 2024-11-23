@@ -31,7 +31,7 @@ function crearRespuesta(evento) {
         src="/storage/${window.user.imagen}"
         alt="Avatar del usuario">
     <div class="ml-4">
-        <h3 class="text-lg font-semibold text-blue-600">${window.user.name}</h3>
+        <h3 class="text-lg font-semibold text-orange-600">${window.user.name}</h3>
         <p class="text-sm text-gray-500">Publicado el: ${fecha}</p>
     </div>
 </div>
