@@ -21,7 +21,7 @@
             @foreach ($respuestas as $respuesta)
                 <div class="bg-gray-50 border border-gray-200 rounded p-4 hover:shadow">
                     <div class="flex items-center mb-2">
-                        <img class="w-10 h-10 rounded-full ring-2 ring-gray-300"
+                        <img class="w-10 h-10 rounded-full object-cover ring-2 ring-gray-300"
                             src="{{ asset('/storage/' . $respuesta->user->imagen) }}" alt="Avatar del usuario">
                         <div class="ml-4">
                             <a href="/perfil-usuario/{{$respuesta->user->id}}">
