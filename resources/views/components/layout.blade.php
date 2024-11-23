@@ -904,7 +904,7 @@
 <body class="bg-gray-100 flex flex-col min-h-screen">
     <header>
         <nav class="bg-gray-100 p-4 shadow-md relative">
-        <!-- Se añade un aviso para saber que estamos con el usuario admin -->
+            <!-- Se añade un aviso para saber que estamos con el usuario admin -->
             @if (auth()->check() && auth()->user()->is_admin)
                 <div class="bg-red-600 text-white font-bold text-center py-2 px-4 rounded-lg  w-max mx-auto mb-4">
                     Modo Calvo Admin Activado
@@ -915,7 +915,8 @@
                     <a href="/crear-hilo"
                         class="bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-700 shadow-md">Crear hilo
                         de discusión</a>
-                        <span class="text-gray-700 font-semibold bg-white px-4 py-2 rounded-md shadow-md">Bienvenido, {{ auth()->user()->name }}</span>
+                    <span class="text-gray-700 font-semibold bg-white px-4 py-2 rounded-md shadow-md">Bienvenido,
+                        {{ auth()->user()->name }}</span>
                 </div>
             @endauth
 
@@ -937,11 +938,13 @@
                 @endauth
             </div>
 
-            <div class="flex items-center justify-center mb-4">
-                <img class="h-16 w-16 rounded-full ring-1 ring-orange-500"
-                    src="{{ Vite::asset('resources/images/logo.png') }}" alt="Logo Forocalvos">
-                <h1 class="text-3xl font-bold text-orange-700 ml-2">Forocalvos</h1>
-            </div>
+            <a href="/">
+                <div class="flex items-center justify-center mb-4">
+                    <img class="h-16 w-16 rounded-full ring-1 ring-orange-500"
+                        src="{{ Vite::asset('resources/images/logo.png') }}" alt="Logo Forocalvos">
+                    <h1 class="text-3xl font-bold text-orange-700 ml-2">Forocalvos</h1>
+                </div>
+            </a>
 
             <ul class="flex justify-around">
                 <li><a href="/"
