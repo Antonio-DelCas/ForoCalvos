@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123456'),
             'is_admin' => 1,
             'imagen' => 'kratos.jpg',
-            'biografia' => 'El mas calvo'
+            'biografia' => 'El más calvo'
         ]);
 
         User::factory()->create([
@@ -90,7 +90,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Videojuegos',
-            'descripcion' => 'Videojuegos para calvos.',
+            'descripcion' => 'Videojuegos para todos los calvos.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -108,31 +108,31 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Moda Calva',
-            'descripcion' => '¿Qué sombrero o gorra se lleva esta temporada? La moda que te hará brillar, pero no por el cuero cabelludo.',
+            'descripcion' => '¿Tipo de gorra se lleva esta temporada? La moda que te hará brillar.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Cuidados Personales',
-            'descripcion' => 'Consejos para mantener ese brillo perfecto en la cabeza. Porque incluso la calvicie requiere mantenimiento.',
+            'descripcion' => 'Consejos para mantener ese brillo perfecto en la cabeza.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Cine y TV',
-            'descripcion' => 'Películas y series donde los calvos tienen todo el protagonismo (o al menos, el reflejo de la luz lo asegura).',
+            'descripcion' => 'Películas y series donde las calvas tienen todo el protagonismo.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Tecnología Calva',
-            'descripcion' => 'Gadgets y tecnología para calvos: cascos ergonómicos, apps para mantener el cuero cabelludo fresco y más.',
+            'descripcion' => 'Gadgets y tecnología para calvos.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
         DB::table('categorias')->insert([
             'titulo' => 'Leyendas Calvas',
-            'descripcion' => 'Historias épicas de calvos que cambiaron el mundo. O al menos, lo intentaron sin despeinarse.',
+            'descripcion' => 'Historias épicas de calvos que cambiaron el mundo sin despeinarse.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -150,7 +150,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => '¿Te reconocen menos los conocidos después de afeitarte la cabeza?',
+            'titulo' => '¿Te reconocen menos después de afeitarte la cabeza?',
             'categoria_id' => 1,
             'users_id' => 5,
             'created_at' => now(),
@@ -158,7 +158,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => '¿Alguna vez te han confundido con otro calvo famoso?',
+            'titulo' => '¿Alguna vez te han confundido con un calvo famoso?',
             'categoria_id' => 1,
             'users_id' => 2,
             'created_at' => now(),
@@ -184,7 +184,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => '¿Alguna ventaja en videojuegos multijugador para los avatares calvos?',
+            'titulo' => '¿Alguna ventaja en multijugador competitivo para los avatares calvos?',
             'categoria_id' => 2,
             'users_id' => 2,
             'created_at' => now(),
@@ -200,7 +200,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => '¿Qué consola es mejor para los calvos: PlayStation, Xbox o Nintendo?',
+            'titulo' => '¿Qué consola es mejor para nosotros como calvos: PlayStation, Xbox o Nintendo?',
             'categoria_id' => 2,
             'users_id' => 3,
             'created_at' => now(),
@@ -226,7 +226,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => '¿Qué tan peligroso es el fútbol para un calvo? Riesgo de quemaduras solares en la cancha',
+            'titulo' => '¿Qué tan peligroso es el fútbol para un calvo? Riesgo de quemaduras solares en la calva',
             'categoria_id' => 3,
             'users_id' => 2,
             'created_at' => now(),
@@ -252,7 +252,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => 'Visitar el Ártico en verano: ¡ideal para nuestras calvas!',
+            'titulo' => 'Visitar el Ártico en verano: ¡ideal para nuestras cabezas!',
             'categoria_id' => 4,
             'users_id' => 5,
             'created_at' => now(),
@@ -286,7 +286,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => 'Los mejores sombreros para reflejar el estilo y no el sol',
+            'titulo' => 'Los mejores sombreros para reflejar estilo y no el sol',
             'categoria_id' => 5,
             'users_id' => 3,
             'created_at' => now(),
@@ -312,7 +312,7 @@ class DatabaseSeeder extends Seeder
         // Categoria 6
 
         DB::table('hilos')->insert([
-            'titulo' => 'Aceites y lociones para mantener el brillo perfecto',
+            'titulo' => 'Aceites o lociones para mantener el brillo perfecto',
             'categoria_id' => 6,
             'users_id' => 2,
             'created_at' => now(),
@@ -362,7 +362,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => 'Películas donde el calvo salva el día (o al menos lo intenta)',
+            'titulo' => 'Películas donde el calvo salva el mundo (o al menos lo intenta)',
             'categoria_id' => 7,
             'users_id' => 3,
             'created_at' => now(),
@@ -370,7 +370,7 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('hilos')->insert([
-            'titulo' => 'Calvos en la comedia: Los mejores momentos de risa garantizada',
+            'titulo' => 'Calvos de la comedia: Los mejores momentos de risa garantizada',
             'categoria_id' => 7,
             'users_id' => 4,
             'created_at' => now(),
@@ -443,7 +443,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 1,
             'users_id' => 3,
-            'contenido' => 'Obviamente el calvo ganaría. Menos distracción, más concentración. Además, sin el cabello, su aerodinámica es mucho mejor. ¡Puede esquivar cualquier golpe!',
+            'contenido' => 'Obviamente el calvo ganaría. Menos distracción, más concentración. Además, sin el pelo, su aerodinámica es mucho mejor. ¡Puede esquivar cualquier golpe!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -473,7 +473,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 2,
             'users_id' => 3,
-            'contenido' => 'A mí me ha pasado varias veces en el gimnasio. Me dicen que me veo más rudo ahora.',
+            'contenido' => 'A mí me ha pasado varias veces en el gimnasio. Me dicen que me veo más duro ahora.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -489,7 +489,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 3,
             'users_id' => 2,
-            'contenido' => 'Sí, con Vin Diesel. Aunque… creo que soy menos musculoso. ¡Es la calva la que confunde!',
+            'contenido' => 'Sí, con Vin Diesel. Aunque… creo que no estoy tan fuerte. ¡Es la calva la que confunde!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -535,7 +535,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 5,
             'users_id' => 6,
-            'contenido' => 'Kratos, sin duda. ¡Ese tipo no necesita ni cabello para hacer temblar a los dioses! Aunque Agent 47 también es letal, Kratos tiene fuerza bruta y un bronceado perfecto.',
+            'contenido' => 'Kratos, sin duda. ¡Ese tipo no necesita ni pelo para hacer temblar a los dioses! Kratos tiene fuerza bruta y una calva perfecta.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -549,7 +549,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 5,
             'users_id' => 5,
-            'contenido' => 'Yo diría Saitama de One Punch Man, aunque no sea un videojuego en sí. ¡Su poder viene de su calvicie! Imagínense si tuviera pelo, ¡ni reconocible sería!',
+            'contenido' => 'Yo diría Saitama de One Punch Man, aunque no sea un videojuego en sí. ¡Su poder viene de su calvicie! Imagínense si tuviera pelo.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -610,7 +610,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('respuestas')->insert([
             'hilos_id' => 8,
-            'users_id' => 3,
+            'users_id' => 6,
             'contenido' => 'Xbox tiene a muchos de los mejores shooters, y esos son perfectos para avatares calvos.',
             'created_at' => now(),
             'updated_at' => now(),
@@ -680,7 +680,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 11,
             'users_id' => 4,
-            'contenido' => 'Yo usé crema una vez y se me resbaló el balón al cabecear. ¡Consejo: elige una crema ligera!',
+            'contenido' => 'Yo suelo ponerme un pañuelo para evitar quemaduras, tambien funciona con el sudor.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -696,7 +696,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 12,
             'users_id' => 4,
-            'contenido' => 'Claro, es más fácil moverse sin pelo que agarrar. ¡La calva es un arma secreta!',
+            'contenido' => 'Claro, es más fácil moverse sin pelo. ¡La calva es un arma secreta!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -710,7 +710,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 12,
             'users_id' => 2,
-            'contenido' => '¿Qué tal un bono de puntos por aerodinámica? Cada golpe cuenta cuando no tienes pelo.',
+            'contenido' => 'Cada golpe cuenta cuando no tienes pelo.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -719,7 +719,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 13,
             'users_id' => 3,
-            'contenido' => 'La Costa Brava tiene algunas playas con mucha sombra por los árboles cercanos. Además, suelen dar sombrillas a buen precio. ¡Ideal para nosotros!',
+            'contenido' => 'La Costa Brava tiene algunas playas con mucha sombra por los árboles cercanos.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -749,7 +749,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 14,
             'users_id' => 4,
-            'contenido' => 'Yo lo probé el año pasado y fue genial. Sin necesidad de sombrero y sin quemaduras.',
+            'contenido' => 'Yo lo probé el año pasado y fue genial. Sin quemaduras, eso si, un gorrito o te congelas.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -875,15 +875,9 @@ class DatabaseSeeder extends Seeder
             'updated_at' => now(),
         ]);
 
-        DB::table('respuestas')->insert([
-            'hilos_id' => 20,
-            'users_id' => 6,
-            'contenido' => '¡Totalmente de acuerdo! Es como ser un superhéroe anónimo, pero con estilo y menos pelo.',
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
         // Hilo 20
+
+
         DB::table('respuestas')->insert([
             'hilos_id' => 20,
             'users_id' => 6,
@@ -903,7 +897,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 20,
             'users_id' => 1,
-            'contenido' => 'Cuidado, que si llevas gafas espejadas y la calva bien pulida, podrías provocar destellos peligrosos.',
+            'contenido' => '¡Totalmente de acuerdo! Es como ser un superhéroe anónimo, pero con estilo y menos pelo.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -919,7 +913,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 21,
             'users_id' => 2,
-            'contenido' => 'El aceite de jojoba es excelente para mantener el brillo sin que parezca grasoso. Se absorbe rápido, ¡perfecto para el día a día!',
+            'contenido' => 'Aloe vera, es perfecto para el día a día',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1011,7 +1005,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 25,
             'users_id' => 5,
-            'contenido' => 'Bruce Willis, sin duda. La calvicie le dio un aire rudo que definió su carrera en el cine de acción.',
+            'contenido' => 'Bruce Willis, sin duda. La calvicie le dio un aire duro que definió su carrera en el cine de acción.',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1056,7 +1050,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('respuestas')->insert([
             'hilos_id' => 27,
-            'users_id' => 3,
+            'users_id' => 6,
             'contenido' => 'Bruce Willis en Die Hard. ¡La calvicie le da un toque de dureza que nadie más tiene!',
             'created_at' => now(),
             'updated_at' => now(),
@@ -1064,7 +1058,7 @@ class DatabaseSeeder extends Seeder
         DB::table('respuestas')->insert([
             'hilos_id' => 27,
             'users_id' => 5,
-            'contenido' => 'Vin Diesel en Rápidos y Furiosos. ¡Toda la saga y nunca necesita peinarse!',
+            'contenido' => 'Vin Diesel en Fast and Furious. ¡Toda la saga y nunca necesita peinarse!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);
@@ -1102,7 +1096,7 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('respuestas')->insert([
             'hilos_id' => 29,
-            'users_id' => 5,
+            'users_id' => 7,
             'contenido' => 'Yo uso una para monitorear el clima y saber cuándo usar gorra. Muy útil.',
             'created_at' => now(),
             'updated_at' => now(),
@@ -1159,7 +1153,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('respuestas')->insert([
             'hilos_id' => 31,
-            'users_id' => 3,
+            'users_id' => 2,
             'contenido' => 'Solo si tiene una función para ajustar el brillo. ¡No quiero parecer una linterna humana!',
             'created_at' => now(),
             'updated_at' => now(),
@@ -1209,7 +1203,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('respuestas')->insert([
             'hilos_id' => 33,
-            'users_id' => 5,
+            'users_id' => 1,
             'contenido' => '¡El look calvo era parte de su marca! Nada más auténtico que su estilo minimalista.',
             'created_at' => now(),
             'updated_at' => now(),
@@ -1251,8 +1245,8 @@ class DatabaseSeeder extends Seeder
 
         DB::table('respuestas')->insert([
             'hilos_id' => 35,
-            'users_id' => 2,
-            'contenido' => 'Para mí, Bruce Willis es el más influyente en el cine. ¡Calvo y rudo!',
+            'users_id' => 6,
+            'contenido' => 'Para mí, Bruce Willis es el más influyente en el cine. ¡Calvo y duro!',
             'created_at' => now(),
             'updated_at' => now(),
         ]);

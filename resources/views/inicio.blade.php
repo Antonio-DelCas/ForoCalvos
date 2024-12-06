@@ -1,7 +1,8 @@
 <x-layout>
-<!-- Mensaje que muestra que se ha registrado correctamente -->
-@if (session()->has('success'))
-        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 text-center" role="alert">
+    <!-- Mensaje que muestra que se ha registrado correctamente -->
+    @if (session()->has('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mt-4 text-center"
+            role="alert">
             <strong class="font-bold">¡Registrado!</strong>
             <p>{{ session('success') }}</p>
         </div>
@@ -24,21 +25,21 @@
         <h2 class="text-3xl font-bold text-orange-900 mb-4">Explora algunas de nuestras Categorías</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <a href="/hilos/1"
-                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out">
+                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out hover:scale-110">
                 <h3 class="text-2xl font-semibold text-orange-800 mb-2">
                     <p>Humor de Calvos</p>
                 </h3>
                 <p class="text-gray-600">Ríete con las mejores bromas y memes sobre la calvicie.</p>
             </a>
             <a href="/hilos/4"
-                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out">
+                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out hover:scale-110">
                 <h3 class="text-2xl font-semibold text-orange-600 mb-2">
                     <p>Historias Divertidas</p>
                 </h3>
                 <p class="text-gray-600">Comparte y disfruta de historias graciosas sobre la calvicie.</p>
             </a>
             <a href="/hilos/6"
-                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out">
+                class="bg-orange-50 border border-orange-200 rounded-lg p-6 hover:shadow transition duration-200 ease-in-out hover:scale-110">
                 <h3 class="text-2xl font-semibold text-orange-700 mb-2">
                     <p>Consejos y Apoyo</p>
                 </h3>
